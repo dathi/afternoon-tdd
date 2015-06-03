@@ -33,5 +33,10 @@ RSpec.describe BooksController, type: :controller do
   	it "should be successful" do
       expect(response).to be_success
     end
+    it "should assign a list of existing books" do
+      Book.create!(:name => "Endymion", :description => "weird")
+      expect(assigns(:books)).not_to be_nil
+      expect(assigns(:books).length).to eq 1
+    end
   end
 end
