@@ -6,6 +6,8 @@ class BooksController < ApplicationController
   	@book = Book.create(book_param)
   	redirect_to books_path if @book
   end
+  def index
+  end
 
   private
   def book_param

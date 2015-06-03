@@ -25,4 +25,13 @@ RSpec.describe BooksController, type: :controller do
   	  expect(response).to redirect_to books_path
   	end
   end
+
+  describe "GET #index" do
+  	before do
+  	  get :index
+  	end
+  	it "should be successful" do
+      expect(response).to be_success
+    end
+  end
 end
