@@ -7,6 +7,7 @@ class BooksController < ApplicationController
   	redirect_to books_path if @book
   end
   def index
+  	@books = Book.all
   end
 
   private
