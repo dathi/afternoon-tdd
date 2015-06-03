@@ -21,6 +21,8 @@ RSpec.describe BooksController, type: :controller do
   	  expect(assigns(:book)).not_to be_nil
   	  expect(assigns(:book).name).to eq "Hood"
   	end
-  	
+  	it "should redirect to the book list page" do
+  	  expect(response).to redirect_to books_path
+  	end
   end
 end
