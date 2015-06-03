@@ -1,5 +1,5 @@
 Given(/^I go to the new book page$/) do
-  pending # express the regexp above with the code you wish you had
+  visit new_book_path
 end
 
 Given(/^I fill in "(.*?)" with "(.*?)"$/) do |arg1, arg2|
