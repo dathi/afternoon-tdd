@@ -11,7 +11,7 @@ When(/^I press "(.*?)"$/) do |create|
 end
 
 Then(/^I should be on the book list page$/) do
-  redirect books_path
+  visit books_path
 end
 
 Then(/^I should see "(.*?)"$/) do |arg1|
